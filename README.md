@@ -1,9 +1,24 @@
-# Secure OTA Firmware Update Project
+# Secure OTA Firmware Update System
 
-Infotact Internship Project
+## Objective
+Build a secure OTA firmware delivery platform for IoT devices.
 
-Team:
-- Kundan Gupta
+## Features
+- SHA256 Hash Verification
+- RSA Digital Signatures
+- Secure Firmware Distribution
+- Rollback Protection
+- OTA Update Agent
 
-Status:
-- Week 1 Started 
+## Tech Stack
+- Python
+- FastAPI
+- GitHub Actions
+- AWS S3
+- Git & GitHub
+
+## Architecture
+Developer -> Sign Firmware -> Upload -> Device Verify -> Install
+
+## Status
+Week 1: Repository & Architecture Setup
