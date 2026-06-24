@@ -13,6 +13,3 @@
 - RSA Digital Signatures
 - Version Validation
 - Secure Firmware Distribution
-git add .
-git commit -m "docs: add OTA threat model"
-git push
