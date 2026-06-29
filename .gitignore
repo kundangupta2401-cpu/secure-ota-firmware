@@ -1,0 +1,6 @@
+# Python Cache
+__pycache__/
+*.pyc
+
+# Private RSA Keys
+signing/private_key.pem
