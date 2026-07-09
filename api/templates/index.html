@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure OTA Firmware Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🔐 Secure OTA Firmware Dashboard</h1>
+        <p>Secure Over-The-Air Firmware Management System</p>
+    </header>
+
+    <section class="status-grid">
+
+        <div class="status-card">
+            <h3>Firmware Version</h3>
+            <span>{{ firmware_version }}</span>
+        </div>
+
+        <div class="status-card">
+            <h3>OTA Server</h3>
+            <span class="green">{{ server_status }}</span>
+        </div>
+
+        <div class="status-card">
+            <h3>Device</h3>
+            <span class="green">{{ device_status }}</span>
+        </div>
+
+        <div class="status-card">
+            <h3>Signature</h3>
+            <span class="green">{{ signature_status }}</span>
+        </div>
+
+    </section>
+
+    <section class="progress-card">
+
+        <h2>Project Progress</h2>
+
+        <div class="progress-bar">
+
+            <div class="progress-fill"></div>
+
+        </div>
+
+        <p>Current Progress : <strong>100%</strong></p>
+
+    </section>
+
+    <section class="modules">
+
+        <h2>Modules</h2>
+
+        <table>
+
+            <tr>
+                <th>Module</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>RSA Key Generation</td>
+                <td>🟢 Completed</td>
+            </tr>
+
+            <tr>
+                <td>Firmware Signing</td>
+                <td>🟢 Completed</td>
+            </tr>
+
+            <tr>
+                <td>Signature Verification</td>
+                <td>🟢 Completed</td>
+            </tr>
+
+            <tr>
+                <td>OTA Installation</td>
+                <td>🟢 Completed</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section class="buttons">
+
+        <button id="generateBtn">Generate Keys</button>
+
+        <button id="signBtn">Sign Firmware</button>
+
+        <button id="verifyBtn">Verify Firmware</button>
+
+        <button id="installBtn">Install Firmware</button>
+
+    </section>
+
+    <section class="logs">
+
+        <h2>Live Activity</h2>
+
+        <ul id="logs">
+
+            <li>✅ Dashboard Started</li>
+            <li>🟢 OTA Server Online</li>
+            <li>📦 Firmware Version Loaded</li>
+
+        </ul>
+
+    </section>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
