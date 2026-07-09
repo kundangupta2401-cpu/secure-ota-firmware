@@ -1,24 +1,36 @@
-# Secure OTA Firmware Update System
-
-## Objective
-Build a secure OTA firmware delivery platform for IoT devices.
+# Secure OTA Firmware Management System
 
 ## Features
-- SHA256 Hash Verification
-- RSA Digital Signatures
-- Secure Firmware Distribution
-- Rollback Protection
-- OTA Update Agent
+
+- RSA Key Generation
+- Firmware Signing
+- Signature Verification
+- OTA Installation Simulation
+- Firmware Upload
+- Web Dashboard
+- Live Activity Logs
 
 ## Tech Stack
+
 - Python
 - FastAPI
-- GitHub Actions
-- AWS S3
-- Git & GitHub
+- HTML
+- CSS
+- JavaScript
+- Cryptography
 
-## Architecture
-Developer -> Sign Firmware -> Upload -> Device Verify -> Install
+## Workflow
 
-## Status
-Week 1: Repository & Architecture Setup
+Upload Firmware
+↓
+
+Generate RSA Keys
+↓
+
+Sign Firmware
+↓
+
+Verify Signature
+↓
+
+Install Firmware

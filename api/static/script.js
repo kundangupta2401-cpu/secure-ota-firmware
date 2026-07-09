@@ -61,3 +61,36 @@ document
     callAPI("/install_firmware");
 
 });
+
+document
+.getElementById("uploadBtn")
+.addEventListener("click", uploadFirmware);
+
+async function uploadFirmware(){
+
+    const fileInput = document.getElementById("firmwareFile");
+
+    if(fileInput.files.length===0){
+
+        alert("Select Firmware");
+
+        return;
+    }
+
+    const formData=new FormData();
+
+    formData.append("file",fileInput.files[0]);
+
+    const response=await fetch("/upload_firmware",{
+
+        method:"POST",
+
+        body:formData
+
+    });
+
+    const data=await response.json();
+
+    addLog(data.message);
+
+}

@@ -88,7 +88,15 @@
         </table>
 
     </section>
+     <h2>Upload New Firmware</h2>
 
+<input type="file" id="firmwareFile">
+
+<button id="uploadBtn">
+    Upload Firmware
+</button>
+
+<br><br>
     <section class="buttons">
 
         <button id="generateBtn">Generate Keys</button>
@@ -113,6 +121,23 @@
 
         </ul>
 
+        <h2>Firmware History</h2>
+
+     <table class="history-table">
+     <tr>
+        <th>Version</th>
+        <th>Status</th>
+        <th>Time</th>
+     </tr>
+
+    <tr>
+        <td>firmware_v1.bin</td>
+        <td>Installed ✅</td>
+        <td>Today</td>
+    </tr>
+
+</table>
+
     </section>
 
 </div>
@@ -121,3 +146,11 @@
 
 </body>
 </html>
+
+<footer>
+
+Secure OTA Firmware Management System
+
+Made using FastAPI • Python • HTML • CSS • JavaScript
+
+</footer>

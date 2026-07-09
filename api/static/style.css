@@ -109,3 +109,33 @@ button:hover{
     border-radius:12px;
 
 }
+
+.history-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+.history-table th,
+.history-table td{
+    border:1px solid #444;
+    padding:12px;
+    text-align:center;
+}
+
+.history-table th{
+    background:#00c8ff;
+    color:black;
+}
+
+footer{
+
+margin-top:50px;
+
+padding:20px;
+
+text-align:center;
+
+color:#888;
+
+}

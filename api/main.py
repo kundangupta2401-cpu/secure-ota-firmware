@@ -1,3 +1,5 @@
+from fastapi import UploadFile, File
+import shutil
 import subprocess
 import os
 from fastapi.responses import JSONResponse
@@ -81,3 +83,14 @@ def install_firmware():
         "status": "success",
         "message": result.stdout
     })
+@app.post("/upload_firmware")
+async def upload_firmware(file: UploadFile = File(...)):
+
+    save_path = f"firmware/uploads/{file.filename}"
+
+    with open(save_path, "wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
+
+    return {
+        "message": f"{file.filename} uploaded successfully!"
+    }
